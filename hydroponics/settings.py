@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-n6ykbfcard&d_ll-=clouz5@p@g0drsnvvp_61rym1xnw9rt1p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://hydroponics-production.up.railway.app/']
 
 
 # Application definition
