@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-n6ykbfcard&d_ll-=clouz5@p@g0drsnvvp_61rym1xnw9rt1p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -67,11 +67,14 @@ WSGI_APPLICATION = 'hydroponics.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres.tiiqtnfkosotapypalqr',
+        'PASSWORD': 'sRIVARDHAN@2003',  # Replace with actual password
+        'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',
+        'PORT': '6543',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
