@@ -1,0 +1,707 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Hydroponics</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+        <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Hero Start -->
+            <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-md-12 col-lg-7">
+                <h4 class="mb-3 text-secondary">100% Organic Foods</h4>
+                <h1 class="mb-5 display-3 text-primary">Organic Veggies & Fruits Foods</h1>
+                <div class="position-relative mx-auto">
+                    <input id="esp-ip" class="form-control border-2 border-secondary w-75 py-3 px-4 rounded-pill" type="text" placeholder="Enter the device IP address">
+                    <button type="submit" class="btn btn-primary border-2 border-secondary py-3 px-4 position-absolute rounded-pill text-white h-100" style="top: 0; right: 25%;">Connect Now</button>
+                </div>                
+                </div>
+                <div class="col-md-12 col-lg-5">
+                <div id="carouselId" class="carousel slide position-relative" data-bs-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active rounded">
+                        <img src="{% static 'img/hero-img-1.png' %}" class="img-fluid w-100 h-100 bg-secondary rounded" alt="First slide">
+                        <a href="#" class="btn px-4 py-2 text-white rounded">Fruites</a>
+                    </div>
+                    <div class="carousel-item rounded">
+                        <img src="{% static 'img/hero-img-2.jpg' %}" class="img-fluid w-100 h-100 rounded" alt="Second slide">
+                        <a href="#" class="btn px-4 py-2 text-white rounded">Vesitables</a>
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+
+    <!-- Fruits Shop Start-->
+        <div class="container-fluid fruite py-5">
+            <div class="container py-5">
+                <div class="tab-class text-center">
+                    <div class="row g-4">
+                        <div class="col-lg-4 text-start">
+                            <h1>Our Organic Products</h1>
+                        </div>
+                        <div class="col-lg-8 text-end">
+                            <ul class="nav nav-pills d-inline-flex text-center mb-5">
+                                <li class="nav-item">
+                                    <a class="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
+                                        <span class="text-dark" style="width: 130px;">All Products</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
+                                        <span class="text-dark" style="width: 130px;">Vegetables</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3">
+                                        <span class="text-dark" style="width: 130px;">Fruits</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="{% static 'img/g.png' %}" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Grapes</h4>
+                                                    <p>Growth Days: 105 Days </p>
+                                                    <p>Temperature: 15°C– 30°C</p>
+                                                    <p>Water Temp: 18°C–24°C</p>
+                                                    <marquee behavior="scroll" direction="left" class="text-danger">Requires a trellis system for support and controlled pruning to maximize fruit production.</marquee>
+                                                    <div class="d-flex justify-content-center flex-lg-wrap">
+                                                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="2">
+                                                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Popup Modal -->
+                                                <div id="statusModal" class="modal">
+                                                    <div class="modal-content">
+                                                        <h4>Status</h4>
+                                                        <p id="statusText">Initializing...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="{% static 'img/dragon.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Dragon Fruit</h4>
+                                                    <p>Growth Days : 450 Days</p>
+                                                    <p>Temperature: 15°C–35°C</p>
+                                                    <p>Water Temp: 18°C–26°C</p>
+                                                    <marquee behavior="scroll" direction="left" class="text-danger">Prefers warm temperatures and high humidity for best flowering and fruit set.</marquee>
+                                                    <div class="d-flex justify-content-center flex-lg-wrap">
+                                                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="3">
+                                                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="{% static 'img/rasi.png' %}" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Raspberries</h4>
+                                                    <p>Growth Days : 180 Days</p>
+                                                    <p>Temperature: 15°C–28°C</p>
+                                                    <p>Water Temp: 18°C–22°C</p>
+                                                    <marquee behavior="scroll" direction="left" class="text-danger">Requires pruning to remove dead canes and encourage new fruit-bearing shoots.</marquee>
+                                                    <div class="d-flex justify-content-center flex-lg-wrap">
+                                                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="4">
+                                                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                                                        </button>
+                                                    </div>
+                                                </div>                                                                         
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="{% static 'img/Blueberries.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Blueberries</h4>
+                                                    <p>Growth Days : 930 Days</p>
+                                                    <p>Temperature: 15°C–27°C</p>
+                                                    <p>Water Temp: 18°C–22°C</p>
+                                                    <marquee behavior="scroll" direction="left" class="text-danger">Requires acidic nutrient solution and organic additives like peat moss for best growth.
+                                                    </marquee>
+                                                    <div class="d-flex justify-content-center flex-lg-wrap">
+                                                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="5">
+                                                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="{% static 'img/Strawberries.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Strawberries</h4>
+                                                    <p>Growth Days : 105 Days</p>
+                                                    <p>Temperature: 15°C–26°C</p>
+                                                    <p>Water Temp: 18°C–22°C</p>
+                                                    <marquee behavior="scroll" direction="left" class="text-danger">Needs careful monitoring of nutrients</marquee>
+                                                    <div class="d-flex justify-content-center flex-lg-wrap">
+                                                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="1">
+                                                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="{% static 'img/watermelon.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Watermelon</h4>
+                                                    <p>Growth Days : 100 Days</p>
+                                                    <p>Temperature: 18°C–32°C</p>
+                                                    <p>Water Temp: 20°C–26°C</p>
+                                                    <marquee behavior="scroll" direction="left" class="text-danger">Needs hand pollination or bee pollination in a controlled environment.
+                                                    </marquee>
+                                                    <div class="d-flex justify-content-center flex-lg-wrap">
+                                                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="6">
+                                                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="{% static 'img/Cantaloupe.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Cantaloupe</h4>
+                                                    <p>Growth Days : 100 Days</p>
+                                                    <p>Temperature: 18°C–32°C</p>
+                                                    <p>Water Temp: 20°C–26°C</p>
+                                                    <marquee behavior="scroll" direction="left" class="text-danger">Requires good air circulation to prevent fungal diseases.
+                                                    </marquee>
+                                                    <div class="d-flex justify-content-center flex-lg-wrap">
+                                                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="7">
+                                                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="{% static 'img/Honeydew Melon.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Honeydew Melon</h4>
+                                                    <p>Growth Days : 90 Days</p>
+                                                    <p>Temperature: 18°C–32°C</p>
+                                                    <p>Water Temp: 20°C–26°C</p>
+                                                    <marquee behavior="scroll" direction="left" class="text-danger">Needs plenty of space for vines to spread and high potassium for sweet fruit.</marquee>
+                                                    <div class="d-flex justify-content-center flex-lg-wrap">
+                                                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="8">
+                                                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="{% static 'img/Figs.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Figs</h4>
+                                                    <p>Growth Days : 150 Days</p>
+                                                    <p>Temperature: 15°C–32°C</p>
+                                                    <p>Water Temp: 18°C–24°C</p>
+                                                    <marquee behavior="scroll" direction="left" class="text-danger">Needs pruning to maintain shape and encourage more fruiting.</marquee>
+                                                    <div class="d-flex justify-content-center flex-lg-wrap">
+                                                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="9">
+                                                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="{% static 'img/Pineapple.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Pineapple</h4>
+                                                    <p>Growth Days : 720 Days</p>
+                                                    <p>Temperature: 18°C–32°C</p>
+                                                    <p>Water Temp: 20°C–26°C</p>
+                                                    <marquee behavior="scroll" direction="left" class="text-danger"> Needs at least 12–16 hours of light to encourage fruiting.</marquee>
+                                                    <div class="d-flex justify-content-center flex-lg-wrap">
+                                                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="10">
+                                                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane fade show p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-12">
+                                    <div class="row g-4">
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="{% static 'img/fruite-item-1.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Orange</h4>
+                                                    <p>Growth Days : 1095 Days</p>
+                                                    <p>Temperature: 15°C–32°C</p>
+                                                    <p>Water Temp: 18°C–26°C</p>
+                                                    <marquee behavior="scroll" direction="left" class="text-danger">Requires cold exposure to improve fruit sweetness.</marquee>
+                                                    <div class="d-flex justify-content-center flex-lg-wrap">
+                                                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="11">
+                                                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-4 col-xl-3">
+                                            <div class="rounded position-relative fruite-item">
+                                                <div class="fruite-img">
+                                                    <img src="{% static 'img/fruite-item-6.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                                                </div>
+                                                <div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">Fruits</div>
+                                                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                                                    <h4>Apples</h4>
+                                                    <p>Growth Days : 1460 Days</p>
+                                                    <p>Temperature: 15°C–30°C</p>
+                                                    <p>Water Temp: 18°C–24°C</p>
+                                                    <marquee behavior="scroll" direction="left" class="text-danger">Needs cold stratification to promote proper fruiting cycles.</marquee>
+                                                    <div class="d-flex justify-content-center flex-lg-wrap">
+                                                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="12">
+                                                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+        </div>
+        <!-- Fruits Shop End-->
+
+
+        <!-- Vesitable Shop Start-->
+        <div class="container-fluid vesitable py-5">
+            <div class="container py-5">
+            <h1 class="mb-0">Fresh Organic Vegetables</h1>
+            <div class="owl-carousel vegetable-carousel justify-content-center">
+                <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="{% static 'img/Lettuce.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
+                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                    <h4>Lettuce</h4>
+                    <p>Growth Days : 45 Days</p>
+                    <p>Temperature: 15°C–25°C</p>
+                    <p>Water Temp: 18°C–24°C</p>
+                    <marquee behavior="scroll" direction="left" class="text-danger">Grows well in cool temperatures, avoid excess heat to prevent bolting.</marquee>
+                    <div class="d-flex justify-content-center flex-lg-wrap">
+                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="14">
+                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                        </button>
+                    </div>
+                </div>
+                </div>
+                <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="{% static 'img/Tomatoes.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
+                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                    <h4>Tomatoes</h4>
+                    <p>Growth Days : 90 Days</p>
+                    <p>Temperature: 18°C–30°C</p>
+                    <p>Water Temp: 18°C–26°C</p>
+                    <marquee behavior="scroll" direction="left" class="text-danger">Needs support (trellis system) and regular pruning for high yield.</marquee>
+                    <div class="d-flex justify-content-center flex-lg-wrap">
+                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="15">
+                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                        </button>
+                    </div>
+                </div>
+                </div>
+                <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="{% static 'img/Cucumbers.jpg' %}" class="img-fluid w-100 rounded-top bg-light" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
+                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                    <h4>Cucumbers</h4>
+                    <p>Growth Days : 70 Days</p>
+                    <p>Temperature: 18°C–30°C</p>
+                    <p>Water Temp: 20°C–26°C</p>
+                    <marquee behavior="scroll" direction="left" class="text-danger">Requires hand pollination or bee pollination in indoor hydroponics.</marquee>
+                    <div class="d-flex justify-content-center flex-lg-wrap">
+                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="16">
+                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                        </button>
+                    </div>
+                </div>
+                </div>
+                <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="{% static 'img/Eggplant.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
+                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                    <h4>Eggplant</h4>
+                    <p>Growth Days : 90 Days</p>
+                    <p>Temperature: 18°C–32°C</p>
+                    <p>Water Temp: 20°C–26°C</p>
+                    <marquee behavior="scroll" direction="left" class="text-danger">Needs pruning to remove excess leaves and improve airflow.</marquee>
+                    <div class="d-flex justify-content-center flex-lg-wrap">
+                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="13">
+                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                        </button>
+                    </div>
+                </div>
+                </div>
+                <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="{% static 'img/Okra.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
+                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                    <h4>Lady's finger</h4>
+                    <p>Growth Days : 60 Days</p>
+                    <p>Temperature: 18°C–32°C</p>
+                    <p>Water Temp: 20°C–28°C</p>
+                    <marquee behavior="scroll" direction="left" class="text-danger">Requires high light exposure (12+ hours per day) for better fruiting.</marquee>
+                    <div class="d-flex justify-content-center flex-lg-wrap">
+                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="17">
+                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                        </button>
+                    </div>
+                </div>
+                </div>
+                <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="{% static 'img/Radishes.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
+                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                    <h4>Radishes</h4>
+                    <p>Growth Days : 35 Days</p>
+                    <p>Temperature: 10°C–24°C</p>
+                    <p>Water Temp: 15°C–22°C</p>
+                    <marquee behavior="scroll" direction="left" class="text-danger">Prefers deep grow beds for proper root development.</marquee>
+                    <div class="d-flex justify-content-center flex-lg-wrap">
+                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="18">
+                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                        </button>
+                    </div>
+                </div>
+                </div>
+                <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="{% static 'img/Carrots.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
+                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                    <h4>Carrots</h4>
+                    <p>Growth Days : 80 Days</p>
+                    <p>Temperature: 10°C–25°C</p>
+                    <p>Water Temp: 16°C–22°C</p>
+                    <marquee behavior="scroll" direction="left" class="text-danger">Needs well-aerated water and light nutrient solution for uniform root growth.</marquee>
+                    <div class="d-flex justify-content-center flex-lg-wrap">
+                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="19">
+                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                        </button>
+                    </div>
+                </div>
+                </div>
+                <div class="border border-primary rounded position-relative vesitable-item">
+                <div class="vesitable-img">
+                    <img src="{% static 'img/Onions.jpg' %}" class="img-fluid w-100 rounded-top" alt="">
+                </div>
+                <div class="text-white bg-primary px-3 py-1 rounded position-absolute" style="top: 10px; right: 10px;">Vegetable</div>
+                <div class="p-4 border border-secondary border-top-0 rounded-bottom">
+                    <h4>Onions</h4>
+                    <p>Growth Days : 120 Days</p>
+                    <p>Temperature: 12°C–28°C</p>
+                    <p>Water Temp: 18°C–24°C</p>
+                    <marquee behavior="scroll" direction="left" class="text-danger">Needs proper spacing for bulb formation and long growing duration.</marquee>
+                    <div class="d-flex justify-content-center flex-lg-wrap">
+                        <button class="btn border border-secondary rounded-pill px-3 text-primary start-btn" data-id="20">
+                            <i class="fa fa-seedling me-2 text-primary"></i> Start
+                        </button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Vesitable Shop End -->
+
+
+        <!-- Banner Section Start-->
+        <div class="container-fluid banner bg-secondary my-5">
+            <div class="container py-5">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                <div class="py-4">
+                    <h1 class="display-3 text-white">Seed well</h1>
+                    <h1 class="display-3 text-white">Grow well</h1>
+                    <h1 class="display-3 text-white">Eat well</h1>
+                    <p class="mb-4 text-dark">The Cheapest And Easiest Hydroponic System For Beginners Who Want To Grow Plants Without Soil</p>
+                    <a href="#" class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">Connect</a>
+                </div>
+                </div>
+                <div class="col-lg-6">
+                <div class="position-relative">
+                    <img src="{% static 'img/Seed well.jpg' %}" class="img-fluid w-100 rounded" alt="">
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Banner Section End -->
+
+        <!-- Fact Start -->
+        <div class="container-fluid py-5">
+            <div class="container">
+            <div class="bg-light p-5 rounded">
+                <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="counter bg-white rounded p-5">
+                    <i class="fa fa-users text-secondary"></i>
+                    <h4>Sensor values</h4>
+                    <h1>1963</h1>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="counter bg-white rounded p-5">
+                    <i class="fa fa-users text-secondary"></i>
+                    <h4>Sensor values</h4>
+                    <h1>99%</h1>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="counter bg-white rounded p-5">
+                    <i class="fa fa-users text-secondary"></i>
+                    <h4>Sensor values</h4>
+                    <h1>33</h1>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="counter bg-white rounded p-5">
+                    <i class="fa fa-users text-secondary"></i>
+                    <h4>Sensor values</h4>
+                    <h1>789</h1>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Fact Start -->
+
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright bg-dark py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Hydroponics</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 my-auto text-center text-md-end text-white">
+                        Designed By <a class="border-bottom" href="https://www.kriovant.tech/">Kriovant</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary border-3 border-primary rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+    </body>
+
+</html>
+
+      
+
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".start-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            let cropId = this.getAttribute("data-id");  
+            let espIp = document.querySelector("#esp-ip") ? document.querySelector("#esp-ip").value : null;
+
+            if (!cropId) {
+                alert("Invalid Crop ID!");
+                return;
+            }
+            if (!espIp) {
+                alert("Please enter ESP8266 IP address!");
+                return;
+            }
+
+            let popup = document.createElement("div");
+            popup.innerHTML = `<div class="popup"><p>Fetching Data...</p></div>`;
+            document.body.appendChild(popup);
+
+            fetch(`/crops/send_to_esp8266/${cropId}/`, {  
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": getCSRFToken()  // Ensure CSRF token is sent
+                },
+                body: JSON.stringify({ esp_ip: espIp })  
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Response from Django:", data);  
+                popup.innerHTML = `<p>${data.message}</p>`;
+                setTimeout(() => popup.remove(), 3000);
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                popup.innerHTML = `<p>Error: ${error}</p>`;
+                setTimeout(() => popup.remove(), 3000);
+            });
+        });
+    });
+
+    function getCSRFToken() {
+        let cookieValue = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('csrftoken='))
+            ?.split('=')[1];
+        return cookieValue || '';
+    }
+});
+
+</script>
+
+<style>
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 100;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        width: 250px;
+        height: auto;
+        max-height: 30%;
+        overflow-y: auto;
+        text-align: center;
+    }
+</style>
