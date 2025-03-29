@@ -47,8 +47,7 @@ This project is an IoT-based hydroponics monitoring system using an ESP8266 micr
    ```
 2. Clone the project repository:
    ```sh
-   git clone https://github.com/your-repository/esp8266-hydroponics.git
-   cd esp8266-hydroponics
+   https://github.com/PNS-Srivardhan/Hydroponics.git
    ```
 3. Start the Django server:
    ```sh
@@ -84,5 +83,13 @@ This project is an IoT-based hydroponics monitoring system using an ESP8266 micr
 - **ESP8266 not responding to requests?**
   - Verify the ESP8266 IP address and ensure it is in the same network as your system.
 
+web interface url (NOTE : This is the frontend design excluding SRU Operations)
+```sh 
+https://hydroponics-production.up.railway.app/
+```
+
 ## License
 This project is open-source and available under the MIT License.
+
+## Author
+**Developed by PNSSVARDHAN** 🚀
