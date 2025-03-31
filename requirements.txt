@@ -47,7 +47,6 @@ flatbuffers
 fonttools
 fqdn
 gast
-gcloud
 gitdb
 GitPython
 google-api-core
@@ -100,7 +99,6 @@ jupyterlab
 jupyterlab_pygments
 jupyterlab_server
 jupyterlab_widgets
-jws
 keras
 kiwisolver
 libclang
@@ -126,7 +124,6 @@ notebook
 notebook_shim
 num2words
 numpy
-oauth2client
 oauthlib
 opencv-python
 opt-einsum
@@ -157,11 +154,9 @@ pyasn1-modules
 pycparser
 pycryptodome
 pydeck
-PyDrive
+PyDrive2
 pydyf
 Pygments
-pyinstaller
-pyinstaller-hooks-contrib
 PyJWT
 pyparsing
 pyphen
@@ -175,8 +170,6 @@ python-dateutil
 python-json-logger
 python-jwt
 pytz
-pywin32-ctypes
-pywinpty
 PyYAML
 pyzmq
 qtconsole
@@ -205,8 +198,6 @@ tenacity
 tensorboard
 tensorboard-data-server
 tensorflow
-tensorflow-intel
-tensorflow-io-gcs-filesystem
 termcolor
 terminado
 threadpoolctl
@@ -233,5 +224,4 @@ Werkzeug
 widgetsnbextension
 wrapt
 yarg
-your-package
 zopfli
