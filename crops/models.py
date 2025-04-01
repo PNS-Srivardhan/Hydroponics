@@ -37,3 +37,17 @@ class CultivatingCrop(models.Model):
 
     def __str__(self):
         return f"{self.crop.crop_name} - {self.start_date}"
+    
+# models.py
+from django.db import models
+
+class SensorData(models.Model):
+    tds = models.FloatField()  # TDS (Total Dissolved Solids) level
+    ph = models.FloatField()  # pH level
+    humidity = models.FloatField()  # Humidity level
+    water_temp = models.FloatField()  # Water Temperature
+    air_temp = models.FloatField()  # Air Temperature
+    timestamp = models.DateTimeField(auto_now_add=True)  # Timestamp of when data is received
+
+    def __str__(self):
+        return f"Sensor Data at {self.timestamp}"

@@ -72,3 +72,42 @@ def send_to_esp8266(request, id):
             return JsonResponse({"success": False, "message": f"Failed to connect to ESP8266: {str(e)}"})
 
     return JsonResponse({"success": False, "message": "Invalid request method!"})
+
+
+# views.py
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from .models import SensorData
+import json
+
+@csrf_exempt  # Disable CSRF for API endpoint (not recommended for production, but fine for testing)
+def sensor_data(request):
+    if request.method == 'POST':
+        try:
+            # Parse the incoming JSON data
+            data = json.loads(request.body)
+
+            # Extract sensor values from the JSON data
+            tds = data.get('TDS')
+            ph = data.get('pH')
+            humidity = data.get('Humidity')
+            water_temp = data.get('WaterTemp')
+            air_temp = data.get('AirTemp')
+
+            # Save the data to the database
+            sensor_data = SensorData.objects.create(
+                tds=tds,
+                ph=ph,
+                humidity=humidity,
+                water_temp=water_temp,
+                air_temp=air_temp
+            )
+
+            # Return a success response
+            return JsonResponse({"message": "Sensor data received successfully!"}, status=200)
+
+        except Exception as e:
+            return JsonResponse({"error": str(e)}, status=400)
+
+    # Handle invalid request method
+    return JsonResponse({"error": "Invalid request method. Only POST is allowed."}, status=400)
