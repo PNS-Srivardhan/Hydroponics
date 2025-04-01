@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*global SelectBox, gettext, ngettext, interpolate, quickElement, SelectFilter*/
+=======
+/*global SelectBox, gettext, interpolate, quickElement, SelectFilter*/
+>>>>>>> 203eb79344d77cfd9aed46b68f3560136bacfe06
 /*
 SelectFilter2 - Turns a multiple-select box into a filter interface.
 
@@ -30,9 +34,12 @@ Requires core.js and SelectBox.js.
 
             // <div class="selector"> or <div class="selector stacked">
             const selector_div = quickElement('div', from_box.parentNode);
+<<<<<<< HEAD
             // Make sure the selector div is at the beginning so that the
             // add link would be displayed to the right of the widget.
             from_box.parentNode.prepend(selector_div);
+=======
+>>>>>>> 203eb79344d77cfd9aed46b68f3560136bacfe06
             selector_div.className = is_stacked ? 'selector stacked' : 'selector';
 
             // <div class="selector-available">
