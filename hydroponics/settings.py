@@ -70,13 +70,14 @@ WSGI_APPLICATION = 'hydroponics.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME', 'postgres'),
-        'USER': os.environ.get('DB_USER', 'postgres'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', 'yourpassword'),
-        'HOST': os.environ.get('DB_HOST', 'aws-0-ap-southeast-1.pooler.supabase.com'),
-        'PORT': os.environ.get('DB_PORT', '5433'),
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'ovInxJjxbGOHxzSJrpFQtsVkFOmzwVrl',
+        'HOST': 'hopper.proxy.rlwy.net',
+        'PORT': '15641',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
