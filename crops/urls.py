@@ -8,8 +8,9 @@ router.register(r'fixed-values', CropFixedValuesViewSet)
 router.register(r'cultivating', CultivatingCropViewSet)
 
 urlpatterns = [
-    path('api/', include(router.urls)),
+    path('api/', include(router.urls)),  
+    path('sensor-data/', views.sensor_data, name='sensor_data'),  
     path('', crop_list, name='crop_list'),
     path('send_to_esp8266/<int:id>/', send_to_esp8266, name='send_to_esp8266'),
-    path('sensor-data/', views.sensor_data, name='sensor_data'), 
 ]
+
