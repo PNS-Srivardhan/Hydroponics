@@ -8,8 +8,6 @@ from .models import CropFixedValues, CultivatingCrop
 from .serializers import CropFixedValuesSerializer, CultivatingCropSerializer
 from django.shortcuts import get_object_or_404
 
-ESP8266_URL = "http://192.168.137.7/update"  # ✅ ESP8266 API Endpoint
-
 
 def index(request):
     return render(request, 'index.html')

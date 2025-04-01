@@ -1,7 +1,7 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import CropFixedValuesViewSet, CultivatingCropViewSet, crop_list, send_to_esp8266
-from .views import sensor_data
+from . import views
 
 router = DefaultRouter()
 router.register(r'fixed-values', CropFixedValuesViewSet)
@@ -11,5 +11,5 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('', crop_list, name='crop_list'),
     path('send_to_esp8266/<int:id>/', send_to_esp8266, name='send_to_esp8266'),
-    path('sensor-data/', sensor_data, name='sensor_data'),  
+    path('sensor-data/', views.sensor_data, name='sensor_data'), 
 ]
