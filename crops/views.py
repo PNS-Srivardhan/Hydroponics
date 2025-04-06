@@ -8,6 +8,8 @@ from .models import CropFixedValues, CultivatingCrop
 from .serializers import CropFixedValuesSerializer, CultivatingCropSerializer
 from django.shortcuts import get_object_or_404
 
+ESP8266_URL = "http://192.168.137.7/update"  # ✅ ESP8266 API Endpoint
+
 
 def index(request):
     return render(request, 'index.html')
@@ -41,6 +43,7 @@ def send_to_esp8266(request, id):
             crop = get_object_or_404(CropFixedValues, id=id)
             
             data = {
+                "crop_id": crop.id,
                 "crop_name": crop.crop_name,
                 "min_tds": crop.min_tds,
                 "max_tds": crop.max_tds,
@@ -72,13 +75,6 @@ def send_to_esp8266(request, id):
     return JsonResponse({"success": False, "message": "Invalid request method!"})
 
 
-# views.py
-from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from .models import SensorData
-import json
-
-@csrf_exempt  # Disable CSRF for API endpoint (not recommended for production, but fine for testing)
 def sensor_data(request):
     if request.method == 'POST':
         try:
@@ -109,3 +105,4 @@ def sensor_data(request):
 
     # Handle invalid request method
     return JsonResponse({"error": "Invalid request method. Only POST is allowed."}, status=400)
+

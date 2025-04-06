@@ -666,8 +666,7 @@
 </html>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-<<<<<<< HEAD
+   document.addEventListener("DOMContentLoaded", function () {
     let espIp;
     let statusElement = document.querySelector("#sensor-status"); // Element to show connection status
     let intervalId; // To store the interval reference
@@ -675,12 +674,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".btn-primary").addEventListener("click", function () {
         espIp = document.querySelector("#esp-ip").value;
 
-=======
-    document.querySelector(".btn-primary").addEventListener("click", function () {
-        let espIp = document.querySelector("#esp-ip").value;
-        let statusElement = document.querySelector("#sensor-status"); // Element to show connection status
-        
->>>>>>> 203eb79344d77cfd9aed46b68f3560136bacfe06
         if (!espIp) {
             showPopup("❌ Please enter the ESP8266 IP address!", "error");
             return;
@@ -689,7 +682,6 @@ document.addEventListener("DOMContentLoaded", function () {
         statusElement.innerText = "⏳ Connecting to ESP8266...";
         showPopup("⏳ Connecting to ESP8266...", "loading");
 
-<<<<<<< HEAD
         fetchSensorData(); // Fetch data immediately
 
         // Clear any existing interval before starting a new one
@@ -703,8 +695,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to fetch sensor data
     function fetchSensorData() {
-=======
->>>>>>> 203eb79344d77cfd9aed46b68f3560136bacfe06
         fetch(`http://${espIp}/sensor-data`)
             .then(response => {
                 if (!response.ok) {
@@ -715,8 +705,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 console.log("Sensor Data:", data);
                 statusElement.innerText = "✅ Connected! Data received.";
-<<<<<<< HEAD
-                showPopup("✅ Connected! Sensor Data Updated.", "success");
+                //showPopup("✅ Connected! Sensor Data Updated.", "success");
 
                 // Update sensor values
                 document.querySelector("#tds-value").innerText = data.TDS;
@@ -724,39 +713,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.querySelector("#humidity-value").innerText = data.Humidity;
                 document.querySelector("#water-temp-value").innerText = data.WaterTemp;
                 document.querySelector("#air-temp-value").innerText = data.AirTemp;
-=======
-                showPopup("✅ Connected! Sensor Data Received.", "success");
-
-                // Ensure elements exist before updating
-                if (document.querySelector("#tds-value")) {
-                    document.querySelector("#tds-value").innerText = data.TDS;
-                }
-                if (document.querySelector("#ph-value")) {
-                    document.querySelector("#ph-value").innerText = data.pH;
-                }
-                if (document.querySelector("#humidity-value")) {
-                    document.querySelector("#humidity-value").innerText = data.Humidity;
-                }
-                if (document.querySelector("#water-temp-value")) {
-                    document.querySelector("#water-temp-value").innerText = data.WaterTemp;
-                }
-                if (document.querySelector("#air-temp-value")) {
-                    document.querySelector("#air-temp-value").innerText = data.AirTemp;
-                }
->>>>>>> 203eb79344d77cfd9aed46b68f3560136bacfe06
             })
             .catch(error => {
                 console.error("Error fetching sensor data:", error);
                 statusElement.innerText = "❌ Connection failed. Check the IP & ESP.";
                 showPopup("❌ Connection failed. Check the IP & ESP.", "error");
-<<<<<<< HEAD
                 clearInterval(intervalId); // Stop fetching if connection fails
             });
     }
-=======
-            });
-    });
->>>>>>> 203eb79344d77cfd9aed46b68f3560136bacfe06
 
     // Function to show a popup message
     function showPopup(message, type) {
@@ -767,11 +731,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => popup.remove(), 3000);
     }
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> 203eb79344d77cfd9aed46b68f3560136bacfe06
-    </script>
+   </script>
 
 
 
@@ -794,8 +754,9 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(data => {
                 console.log("ESP Response:", data);
                 if (data.status === "connected") {
+                    showPopup("✅ Device connected successfully!", "success");
                 } else {
-                    showPopup("⚠️ Failed to connect. Check ESP8266.", "error");
+                    showPopup("⚠ Failed to connect. Check ESP8266.", "error");
                 }
             })
             .catch(error => {

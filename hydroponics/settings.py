@@ -42,7 +42,8 @@ MIDDLEWARE = [
 # Enable CORS for production only from trusted origins
 CORS_ALLOWED_ORIGINS = [
     'https://your-frontend-domain.com',  # Replace with your actual frontend domain
-    'https://hydroponics-production.up.railway.app',  # Railway app domain
+    'https://hydroponics-production.up.railway.app', 
+    "http://127.0.0.1:8000", # Railway app domain
 ]
 
 ROOT_URLCONF = 'hydroponics.urls'

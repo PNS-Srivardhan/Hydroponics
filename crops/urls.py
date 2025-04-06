@@ -12,4 +12,3 @@ urlpatterns = [
     path('', crop_list, name='crop_list'),
     path('send_to_esp8266/<int:id>/', send_to_esp8266, name='send_to_esp8266'),
 ]
-
